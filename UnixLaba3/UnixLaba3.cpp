@@ -272,6 +272,23 @@ int main() {
     }
     )";
 
+    std::string Info =
+        "\033[31mRED\033[0m: unknown symbols\n"
+        "\033[32mGREEN\033[0m: numbers\n"
+        "\033[33mYELLOW\033[0m: strings\n"
+        "\033[93mLIGHT_YELLOW\033[0m: functions\n"
+        "\033[94mLIGHT_BLUE\033[0m: booleans\n"
+        "\033[34mBLUE\033[0m: reserved words\n"
+        "\033[35mMAGENTA\033[0m: comments\n"
+        "\033[36mCYAN\033[0m: punctuation marks\n"
+        "\033[96mDARK_CYAN\033[0m: preprocessor\n"
+        "\033[92mLIGHT_GREEN\033[0m: libraries\n"
+        "\033[38;5;208mDARK_ORANGE\033[0m: char type\n"
+        "\033[38;5;202mLAVA\033[0m: library objects\n"
+        "\033[37mLIGHT_GRAY\033[0m: identifiers\n"
+        "\033[90mDARK_GRAY\033[0m: operators\n";
+
+    std::cout << Info << std::endl;
     analyzeCode(code);
     return 0;
 }
